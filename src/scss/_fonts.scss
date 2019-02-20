@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Harabara Bold';
+  src: url('../fonts/harabara-bold.woff2') format('woff2'),
+       url('../fonts/harabara-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harabara';
+  src: url('../fonts/harabara.woff2') format('woff2'),
+       url('../fonts/harabara.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harabara Black';
+  src: url('../fonts/harabara-black.woff2') format('woff2'),
+       url('../fonts/harabara-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harabara Light';
+  src: url('../fonts/harabara-light.woff2') format('woff2'),
+  		 url('../fonts/harabara-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
