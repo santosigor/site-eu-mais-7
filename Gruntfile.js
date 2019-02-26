@@ -18,8 +18,7 @@ module.exports = function(grunt) {
 
     concat: {
 			js: {
-				src: ['src/js/lib/jquery.min.js', 
-							'src/js/lib/owl.carousel.min.js',
+				src: ['src/js/lib/jquery.min.js',
 							'src/js/main.js'
 						],
 				dest: 'dist/js/ems.min.js'
