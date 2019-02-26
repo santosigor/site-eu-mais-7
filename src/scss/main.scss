@@ -41,6 +41,9 @@ ul, ol {
 			&:last-child {
 				margin-right: 0;
 			}
+			&.active {
+				color: #aaa;
+			}
 		}
 		.nav-left {
 			@media (min-width: 992px) {

@@ -53,6 +53,8 @@ ul, ol {
       color: #fff; }
       .ems-header__nav a:last-child {
         margin-right: 0; }
+      .ems-header__nav a.active {
+        color: #aaa; }
     @media (min-width: 992px) {
       .ems-header__nav .nav-left {
         float: left; } }
