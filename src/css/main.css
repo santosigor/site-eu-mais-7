@@ -160,12 +160,26 @@ ul, ol {
         left: -30px;
         width: 60px;
         height: 60px;
+        border-radius: 100%;
         background-color: #8996ae;
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("");
-        border-radius: 100%; }
+        background-size: 36px; }
+        #emsWrapper .ems-content .ems-card span.ico-eu-mente {
+          background-image: url("../images/ico-eu-mente.png"); }
+        #emsWrapper .ems-content .ems-card span.ico-eu-fisico {
+          background-size: 32px;
+          background-image: url("../images/ico-eu-fisico.png"); }
+        #emsWrapper .ems-content .ems-card span.ico-eu-espiritual {
+          background-size: 26px;
+          background-image: url("../images/ico-eu-espiritual.png"); }
+        #emsWrapper .ems-content .ems-card span.ico-eu-ed-financeira {
+          background-image: url("../images/ico-eu-ed-financeira.png"); }
+        #emsWrapper .ems-content .ems-card span.ico-eu-tec-block {
+          background-image: url("../images/ico-eu-tec-block.png"); }
+        #emsWrapper .ems-content .ems-card span.ico-eu-op-binarias {
+          background-size: 32px;
+          background-image: url("../images/ico-eu-op-binarias.png"); }
       #emsWrapper .ems-content .ems-card b {
         display: block;
         font-size: 22px; }
@@ -179,8 +193,6 @@ ul, ol {
       min-height: 546px; }
       #emsWrapper .ems-content .ems-card-curso.ems-bg-dark {
         background: #6a7995; }
-      #emsWrapper .ems-content .ems-card-curso img {
-        max-height: 140px; }
       #emsWrapper .ems-content .ems-card-curso b {
         font-size: 34px;
         margin: 40px 0 30px 0;

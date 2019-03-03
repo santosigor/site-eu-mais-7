@@ -201,12 +201,32 @@ ul, ol {
 				left: -30px;
 				width: 60px;
 				height: 60px;
+		    border-radius: 100%;
 				background-color: #8996ae;
 				background-position: center center;
 		    background-repeat: no-repeat;
-		    background-size: cover;
-		    background-image: url('');
-		    border-radius: 100%;
+		    	background-size: 36px;
+		    &.ico-eu-mente {
+		    	background-image: url('../images/ico-eu-mente.png');
+		    }
+		    &.ico-eu-fisico {
+		    	background-size: 32px;
+		    	background-image: url('../images/ico-eu-fisico.png');
+		    }
+		    &.ico-eu-espiritual {
+		    	background-size: 26px;
+		    	background-image: url('../images/ico-eu-espiritual.png');
+		    }
+		    &.ico-eu-ed-financeira {
+		    	background-image: url('../images/ico-eu-ed-financeira.png');
+		    }
+		    &.ico-eu-tec-block {
+		    	background-image: url('../images/ico-eu-tec-block.png');
+		    }
+		    &.ico-eu-op-binarias {
+		    	background-size: 32px;
+		    	background-image: url('../images/ico-eu-op-binarias.png');
+		    }
 			}
 			b {
 				display: block;
@@ -226,9 +246,6 @@ ul, ol {
 			min-height: 546px;
 			&.ems-bg-dark {
 				background: #6a7995;
-			}
-			img {
-				max-height: 140px;
 			}
 			b {
 				font-size: 34px;
