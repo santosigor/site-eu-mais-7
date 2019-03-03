@@ -13,7 +13,8 @@ body {
 
 ul, ol {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 .form-control {
   font-size: .9rem; }
@@ -200,6 +201,18 @@ ul, ol {
       #emsWrapper .ems-content .ems-card-curso p {
         margin-bottom: 0;
         font-size: 1.1rem; }
+  #emsWrapper .ems-info h3 {
+    font-weight: 700; }
+  #emsWrapper .ems-info ul {
+    margin-top: 12px; }
+    #emsWrapper .ems-info ul li {
+      margin: 12px 0; }
+      #emsWrapper .ems-info ul li .ems-icon-qs7 {
+        margin-right: 8px; }
+        #emsWrapper .ems-info ul li .ems-icon-qs7 img {
+          width: 15px;
+          position: relative;
+          top: -2px; }
 
 .ems-footer {
   text-align: center;
