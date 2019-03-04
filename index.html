@@ -31,7 +31,7 @@
 						<a href="#" class="nav-accr" data-section="section_3">Metodologia de Ensino</a>
 						<a href="#" class="nav-accr" data-section="section_4">Cursos e Workshops</a>
 						<a href="#" class="nav-accr" data-section="section_5">Quero ser eu+7</a>
-						<a href="#">Blog Eu+7</a>
+						<a href="blog.html">Blog Eu+7</a>
 			  	</nav>
 		  	</div>
 	  	</div>
@@ -51,7 +51,7 @@
 	    		<div class="ems-title">
 	    			<h3>Somos <span>+7</span></h3>
 	    		</div>
-    			<div class="ems-desc-mais-7 text-center">
+    			<div class="ems-desc-mais-7">
     				<p>
 	    				A Somos + 7 é uma empena que trabalha com a formação e desenvolvimento humano por meio da educação. Com a estagnação do mercado financeiro, que está obsoleto, é preciso ensinar o ser humano sobre a verdadeira história das nossas riquezas e matérias primas. <br>Aprimorar o autoconhecimento de cada um, a fim de, promover o melhor entendimento das suas potencialidades, fraquezas e, consequentemente, como ter mais qualidade de vida. 
 	    			</p>
@@ -173,7 +173,7 @@
 	            </div>
             </div>
             <div class="col-md-4">
-	            <div class="ems-card-curso">
+	            <div class="ems-card-curso mg-b-0">
 			    			<img src="dist/images/ico-palestra.png" alt="" class="img-fluid">
 	              <b class="d-block">Palestras </b>
 	              <p>Podem ser solicitadas previamente com 15 dias de antecedência, pelo menos. </p>
@@ -214,9 +214,10 @@
 			    				<input type="text" name="mail" id="mail" class="form-control mb-3 mr-md-3" placeholder="Email" maxlength="150" onfocus="emsFocusIpt(this);">
 			    				<input type="text" name="assunto" id="assunto" class="form-control mb-3" placeholder="Assunto" maxlength="150" onfocus="emsFocusIpt(this);">
 		    				</div>
-		    				<textarea class="form-control mb-md-3" rows="10" placeholder="Digite sua mensagem aqui" name="mensagem" id="mensagem" maxlength="1000" onfocus="emsFocusIpt(this);"></textarea>
-		    				<a href="javascript:Contato();" class="btn btn-secondary">Enviar</a>
+		    				<textarea class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui" name="mensagem" id="mensagem" maxlength="1000" onfocus="emsFocusIpt(this);"></textarea>
+		    				<button onclick="Contato();return false;" class="btn btn-secondary">Enviar</button>
 		    			</form>
+		    			<div class="alert alert-warning d-none">E-mail enviado com sucesso, em breve entraremos em contato :)</div>
 		    		</div>
 	    		</div>
 	  		</div>

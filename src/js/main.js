@@ -1,5 +1,7 @@
 $(document).ready(function (){
 
+	// menu
+
 	bgNav();
 
 	$('.nav-accr').on('click', function() {
@@ -28,6 +30,23 @@ $(document).ready(function (){
 	  }
 
 	});
+
+	// blog
+
+	$('.ems-blog-item').hide();
+  $('.ems-blog-item').slice(0, 8).show();
+
+	if ($('.ems-blog-item:hidden').length == 0) {
+		$('.ems-blog-bt-show-more').hide();
+	}
+
+  $('.ems-blog-bt-show-more a').on('click', function (e) {
+    e.preventDefault();
+    $('.ems-blog-item:hidden').slice(0, 8).slideDown('slow');
+    if ($('.ems-blog-item:hidden').length == 0) {
+        $('.ems-blog-bt-show-more').fadeOut('slow');
+    }
+  });
 
 });
 
@@ -68,6 +87,10 @@ function Contato(){
 	if (erro) {
 		$(emsElement).addClass('ems-error');
 	} else {
-		d.submit();
+		$('form .btn').html('Enviando...').attr('disabled','disabled');
+		setTimeout(function(){ 
+			$('form').css('display', 'none');
+			$('.alert-warning').removeClass('d-none'); 
+		}, 3000);
 	}
 }
