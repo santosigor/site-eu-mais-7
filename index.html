@@ -26,7 +26,7 @@
 		  			</a>
 		  		</h1>
 		  		<nav>
-						<a href="blog.html" class="active">Somos +7</a>
+						<a href="blog.html">Somos +7</a>
 						<a href="cursos.html">Somos o Futuro</a>
 						<a href="contato.html">Metodologia de Ensino</a>
 						<a href="cursos.html">Cursos e Workshops</a>
@@ -207,14 +207,14 @@
 		    		</div>
 	    		</div>
 	    		<div class="col-md-8">
-	    			<form>
+	    			<form name="form" id="form" action="index.html" method="post">
 	    				<div class="d-md-flex flex-md-row">
-		    				<input type="text" name="nome" class="form-control mb-3 mr-md-3" placeholder="Nome" maxlength="300">
-		    				<input type="text" name="mail" class="form-control mb-3 mr-md-3" placeholder="Email" maxlength="150">
-		    				<input type="text" name="assunto" class="form-control mb-3" placeholder="Assunto" maxlength="150">
+		    				<input type="text" name="nome" id="nome" class="form-control mb-3 mr-md-3" placeholder="Nome" maxlength="300" onfocus="emsFocusIpt(this);">
+		    				<input type="text" name="mail" id="mail" class="form-control mb-3 mr-md-3" placeholder="Email" maxlength="150" onfocus="emsFocusIpt(this);">
+		    				<input type="text" name="assunto" id="assunto" class="form-control mb-3" placeholder="Assunto" maxlength="150" onfocus="emsFocusIpt(this);">
 	    				</div>
-	    				<textarea class="form-control mb-md-3" rows="10" placeholder="Digite sua mensagem aqui" maxlength="1000"></textarea>
-	    				<a href="" class="btn btn-secondary">Enviar</a>
+	    				<textarea class="form-control mb-md-3" rows="10" placeholder="Digite sua mensagem aqui" name="mensagem" id="mensagem" maxlength="1000" onfocus="emsFocusIpt(this);"></textarea>
+	    				<a href="javascript:Contato();" class="btn btn-secondary">Enviar</a>
 	    			</form>
 	    		</div>
     		</div>
@@ -227,17 +227,17 @@
     		<span class="ems-icon-logo-gray"><img src="dist/images/logo-rodape.png" alt="eu mais sete"></span>
     	</div>
     	<div class="ems-footer__social_icons">
-    		<a href="">
-    			<span class="ems-icon-twitter"></span>
+    		<a href="" title="Twitter">
+    			<img src="dist/images/ico-twitter.png" alt="">
     		</a>
-    		<a href="">
-    			<span class="ems-icon-facebook"></span>
+    		<a href="" title="Facebook">
+    			<img src="dist/images/icon-facebook.png" alt="">
     		</a>
-    		<a href="">
-    			<span class="ems-icon-linkedin"></span>
+    		<a href="" title="Linkedin">
+    			<img src="dist/images/ico-linkedin.png" alt="">
     		</a>
-    		<a href="">
-    			<span class="ems-icon-instagram"></span>
+    		<a href="" title="Instagram">
+    			<img src="dist/images/ico-instagram.png" alt="">
     		</a>
     	</div>
     </footer>

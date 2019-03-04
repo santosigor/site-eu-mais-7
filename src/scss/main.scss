@@ -6,17 +6,22 @@
 	transition: 				$property $transition $function;
 }
 
+html, body {
+	overflow-x: hidden;
+}
+
 body {
 	min-width: 320px;
-	overflow-x: hidden;
 	font-family: 'Montserrat';
 	color: #343843;
 	font-size: .9rem;
+	background-color: #020202;
+  background-position: top center;
+  background-repeat: no-repeat;
+	@media (min-width: 992px) {
+  	background-size: contain;
+	}
 	&.bg-home {
-		background-color: #020202;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: contain;
 		background-image: url('../images/bg-home.png');
 	}
 }
@@ -35,17 +40,33 @@ ul, ol {
 	}
 }
 
+.ems-error {
+	box-shadow: rgba(244, 67, 54, 0.25) 0px 0px 0px 0.2rem;
+	border-color: rgb(244, 67, 54);
+}
+
+.btn-secondary {
+	background-color: #6c757d;
+  border-color: #9197aa;
+	border-bottom: 2px solid #8089a2;
+	padding: .375rem 2rem;
+}
+
 .ems-header {
 	color: #fff;
-	padding-top: 85px;
+	@media (min-width: 992px) {
+		padding-top: 85px;
+	}
 	&__nav {
 		z-index: 8;
-		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		border-bottom: 1px solid #535353;
 		@include transition(all, .2s, ease-in-out);
+		@media (min-width: 992px) {
+			position: fixed;
+		}
 		h1 {
 			width: 160px;
 			margin-top: 12px;
@@ -54,6 +75,10 @@ ul, ol {
 					display: block;
 					max-width: 100%;
 				}
+			}
+			@media (max-width: 991.98px) {
+				margin-right: auto;
+				margin-left: auto;
 			}
 			@media (min-width: 992px) {
 				float: left;
@@ -74,6 +99,9 @@ ul, ol {
 				&:hover, &.active {
 					color: #8996ae;
 				}
+			}
+			@media (max-width: 991.98px) {
+				display: none;
 			}
 			@media (min-width: 992px) {
 				float: right;
@@ -154,9 +182,13 @@ ul, ol {
 			background-position: center center;
 	    background-repeat: no-repeat;
 	    background-size: cover;
-	    position: absolute;
+	    position: relative;
 	    width: 100%;
 	    height: 100%;
+	    min-height: 220px;
+	    @media (min-width: 992px) {
+				position: absolute;
+			}
 		}
 		&__img1 {
 			background-image: url('../images/bg-somos-o-futuro.jpg');
@@ -284,4 +316,17 @@ ul, ol {
 	text-align: center;
 	padding: 40px 0;
 	background: #e9ecf3;
+	color: #9198ab;
+	.ems-footer_logo {
+		margin:40px 0;
+	}
+	.ems-footer__social_icons {
+		a {
+			text-decoration: none;
+			margin: 0 8px;
+			img {
+				height: 18px;
+			}
+		}
+	}
 }

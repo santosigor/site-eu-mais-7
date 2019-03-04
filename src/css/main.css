@@ -1,14 +1,18 @@
+html, body {
+  overflow-x: hidden; }
+
 body {
   min-width: 320px;
-  overflow-x: hidden;
   font-family: 'Montserrat';
   color: #343843;
-  font-size: .9rem; }
+  font-size: .9rem;
+  background-color: #020202;
+  background-position: top center;
+  background-repeat: no-repeat; }
+  @media (min-width: 992px) {
+    body {
+      background-size: contain; } }
   body.bg-home {
-    background-color: #020202;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: contain;
     background-image: url("../images/bg-home.png"); }
 
 ul, ol {
@@ -22,12 +26,23 @@ ul, ol {
     box-shadow: rgba(137, 150, 174, 0.25) 0px 0px 0px 0.2rem;
     border-color: #8996ae; }
 
+.ems-error {
+  box-shadow: rgba(244, 67, 54, 0.25) 0px 0px 0px 0.2rem;
+  border-color: #f44336; }
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #9197aa;
+  border-bottom: 2px solid #8089a2;
+  padding: .375rem 2rem; }
+
 .ems-header {
-  color: #fff;
-  padding-top: 85px; }
+  color: #fff; }
+  @media (min-width: 992px) {
+    .ems-header {
+      padding-top: 85px; } }
   .ems-header__nav {
     z-index: 8;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,12 +52,19 @@ ul, ol {
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
+    @media (min-width: 992px) {
+      .ems-header__nav {
+        position: fixed; } }
     .ems-header__nav h1 {
       width: 160px;
       margin-top: 12px; }
       .ems-header__nav h1 a img {
         display: block;
         max-width: 100%; }
+      @media (max-width: 991.98px) {
+        .ems-header__nav h1 {
+          margin-right: auto;
+          margin-left: auto; } }
       @media (min-width: 992px) {
         .ems-header__nav h1 {
           float: left; } }
@@ -58,6 +80,9 @@ ul, ol {
         margin-right: 0; }
       .ems-header__nav nav a:hover, .ems-header__nav nav a.active {
         color: #8996ae; }
+    @media (max-width: 991.98px) {
+      .ems-header__nav nav {
+        display: none; } }
     @media (min-width: 992px) {
       .ems-header__nav nav {
         float: right; } }
@@ -122,9 +147,13 @@ ul, ol {
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      position: absolute;
+      position: relative;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      min-height: 220px; }
+      @media (min-width: 992px) {
+        #emsWrapper .ems-bg-gray-dark__img1, #emsWrapper .ems-bg-gray-dark__img2 {
+          position: absolute; } }
     #emsWrapper .ems-bg-gray-dark__img1 {
       background-image: url("../images/bg-somos-o-futuro.jpg"); }
       @media (min-width: 992px) {
@@ -217,4 +246,12 @@ ul, ol {
 .ems-footer {
   text-align: center;
   padding: 40px 0;
-  background: #e9ecf3; }
+  background: #e9ecf3;
+  color: #9198ab; }
+  .ems-footer .ems-footer_logo {
+    margin: 40px 0; }
+  .ems-footer .ems-footer__social_icons a {
+    text-decoration: none;
+    margin: 0 8px; }
+    .ems-footer .ems-footer__social_icons a img {
+      height: 18px; }
