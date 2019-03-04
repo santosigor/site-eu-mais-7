@@ -75,7 +75,12 @@ ul, ol {
       text-decoration: none;
       color: #fff;
       font-size: 15px;
-      font-weight: 600; }
+      font-weight: 600;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
       .ems-header__nav nav a:last-child {
         margin-right: 0; }
       .ems-header__nav nav a:hover, .ems-header__nav nav a.active {
@@ -108,8 +113,7 @@ ul, ol {
       color: #d9dee9; }
 
 #emsWrapper {
-  background: #ffffff;
-  padding-bottom: 64px; }
+  background: #ffffff; }
   #emsWrapper .container-fluid {
     padding: 0; }
   #emsWrapper hr.border-white {
@@ -176,6 +180,8 @@ ul, ol {
           padding: 64px 0 64px 30px; } }
   #emsWrapper .ems-content {
     padding: 64px 0; }
+    #emsWrapper .ems-content#section_4 {
+      padding: 64px 0 0 0; }
     #emsWrapper .ems-content .ems-desc-mais-7 p {
       font-weight: 600; }
     #emsWrapper .ems-content .ems-card {

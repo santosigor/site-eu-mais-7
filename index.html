@@ -26,12 +26,12 @@
 		  			</a>
 		  		</h1>
 		  		<nav>
-						<a href="blog.html">Somos +7</a>
-						<a href="cursos.html">Somos o Futuro</a>
-						<a href="contato.html">Metodologia de Ensino</a>
-						<a href="cursos.html">Cursos e Workshops</a>
-						<a href="cursos.html">Quero ser eu+7</a>
-						<a href="contato.html">Blog Eu+7</a>
+						<a href="#" class="nav-accr" data-section="section_1">Somos +7</a>
+						<a href="#" class="nav-accr" data-section="section_2">Somos o Futuro</a>
+						<a href="#" class="nav-accr" data-section="section_3">Metodologia de Ensino</a>
+						<a href="#" class="nav-accr" data-section="section_4">Cursos e Workshops</a>
+						<a href="#" class="nav-accr" data-section="section_5">Quero ser eu+7</a>
+						<a href="#">Blog Eu+7</a>
 			  	</nav>
 		  	</div>
 	  	</div>
@@ -46,7 +46,7 @@
   	</header>
 
     <div id="emsWrapper">
-    	<section class="ems-content">
+    	<section class="ems-content section" id="section_1">
     		<div class="container">
 	    		<div class="ems-title">
 	    			<h3>Somos <span>+7</span></h3>
@@ -120,7 +120,7 @@
     		</div>
     	</section>
   		<div class="container-fluid ems-bg-gray-dark">
-    		<div class="row">
+    		<div class="row section" id="section_2">
     			<div class="col-md-6">
 	    			<div class="ems-bg-gray-dark__img1"></div>
 	    		</div>
@@ -136,7 +136,7 @@
 	    		</div>
     		</div>
     		<hr class="border-white">
-    		<div class="row flex-md-row-reverse">
+    		<div class="row flex-md-row-reverse section" id="section_3">
     			<div class="col-md-6">
 	    			<div class="ems-bg-gray-dark__img2"></div>
 	    		</div>
@@ -152,7 +152,7 @@
 	    		</div>
     		</div>
   		</div>
-    	<section class="ems-content">
+    	<section class="ems-content section" id="section_4">
     		<div class="container">
 	    		<div class="ems-title">
 	    			<h3>Cursos e Workshops</h3>
@@ -182,43 +182,45 @@
 	    		</div>
     		</div>
     	</section>
-  		<div class="container">
-    		<div class="ems-title">
-    			<h3>Quero ser <span>Eu+7</span></h3>
-    		</div>
-    		<div class="row">
-	    		<div class="col-md-4">
-		    		<div class="ems-info">
-		    			<h3>Eu+7</h3>
-		    			<ul>
-		    				<li>
-		    					<span class="ems-icon-qs7"><img src="dist/images/icon-pin.png"></span> Av. Paulista, 2013 - São Paulo
-		    				</li>
-		    				<li>
-		    					<span class="ems-icon-qs7"><img src="dist/images/icon-phone.png"></span> (11) 8234-8899
-		    				</li>
-		    				<li>
-		    					<span class="ems-icon-qs7"><img src="dist/images/icon-mail.png"></span> eumaissete@eumaissete.com.br
-		    				</li>
-		    				<li>
-		    					<span class="ems-icon-qs7"><img src="dist/images/icon-site.png"></span> www.eumaissete.com.br
-		    				</li>
-		    			</ul>
+    	<section class="ems-content section" id="section_5">
+	  		<div class="container">
+	    		<div class="ems-title">
+	    			<h3>Quero ser <span>Eu+7</span></h3>
+	    		</div>
+	    		<div class="row">
+		    		<div class="col-md-4">
+			    		<div class="ems-info">
+			    			<h3>Eu+7</h3>
+			    			<ul>
+			    				<li>
+			    					<span class="ems-icon-qs7"><img src="dist/images/icon-pin.png"></span> Av. Paulista, 2013 - São Paulo
+			    				</li>
+			    				<li>
+			    					<span class="ems-icon-qs7"><img src="dist/images/icon-phone.png"></span> (11) 8234-8899
+			    				</li>
+			    				<li>
+			    					<span class="ems-icon-qs7"><img src="dist/images/icon-mail.png"></span> eumaissete@eumaissete.com.br
+			    				</li>
+			    				<li>
+			    					<span class="ems-icon-qs7"><img src="dist/images/icon-site.png"></span> www.eumaissete.com.br
+			    				</li>
+			    			</ul>
+			    		</div>
+		    		</div>
+		    		<div class="col-md-8">
+		    			<form name="form" id="form" action="index.html" method="post">
+		    				<div class="d-md-flex flex-md-row">
+			    				<input type="text" name="nome" id="nome" class="form-control mb-3 mr-md-3" placeholder="Nome" maxlength="300" onfocus="emsFocusIpt(this);">
+			    				<input type="text" name="mail" id="mail" class="form-control mb-3 mr-md-3" placeholder="Email" maxlength="150" onfocus="emsFocusIpt(this);">
+			    				<input type="text" name="assunto" id="assunto" class="form-control mb-3" placeholder="Assunto" maxlength="150" onfocus="emsFocusIpt(this);">
+		    				</div>
+		    				<textarea class="form-control mb-md-3" rows="10" placeholder="Digite sua mensagem aqui" name="mensagem" id="mensagem" maxlength="1000" onfocus="emsFocusIpt(this);"></textarea>
+		    				<a href="javascript:Contato();" class="btn btn-secondary">Enviar</a>
+		    			</form>
 		    		</div>
 	    		</div>
-	    		<div class="col-md-8">
-	    			<form name="form" id="form" action="index.html" method="post">
-	    				<div class="d-md-flex flex-md-row">
-		    				<input type="text" name="nome" id="nome" class="form-control mb-3 mr-md-3" placeholder="Nome" maxlength="300" onfocus="emsFocusIpt(this);">
-		    				<input type="text" name="mail" id="mail" class="form-control mb-3 mr-md-3" placeholder="Email" maxlength="150" onfocus="emsFocusIpt(this);">
-		    				<input type="text" name="assunto" id="assunto" class="form-control mb-3" placeholder="Assunto" maxlength="150" onfocus="emsFocusIpt(this);">
-	    				</div>
-	    				<textarea class="form-control mb-md-3" rows="10" placeholder="Digite sua mensagem aqui" name="mensagem" id="mensagem" maxlength="1000" onfocus="emsFocusIpt(this);"></textarea>
-	    				<a href="javascript:Contato();" class="btn btn-secondary">Enviar</a>
-	    			</form>
-	    		</div>
-    		</div>
-  		</div>
+	  		</div>
+  		</section>
     </div>
 
     <footer class="ems-footer">

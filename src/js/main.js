@@ -2,8 +2,31 @@ $(document).ready(function (){
 
 	bgNav();
 
+	$('.nav-accr').on('click', function() {
+	  $("html, body").animate({
+	    scrollTop: $('#' +$(this).data('section')).offset().top - 80}, 500);
+	});
+
+	var alturas = {};
+	$('.section').each(function () {
+	  alturas[$(this).prop('id')] = $(this).offset().top - 84;
+	});
+
 	$(window).scroll(function() {
+    
     bgNav();
+
+
+  	$('.nav-accr').removeClass('active');
+  	if ($(this).scrollTop()>200) {
+    	for(var seccao in alturas) {
+		    if($(window).scrollTop() >= alturas[seccao]) {
+		      $('.nav-accr').removeClass('active');
+		      $('.nav-accr[data-section="' +seccao+ '"]').addClass('active');
+		    }
+	    }
+	  }
+
 	});
 
 });
