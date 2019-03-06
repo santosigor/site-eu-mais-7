@@ -21,14 +21,23 @@ body {
 	@media (min-width: 1200px) {
   	background-size: contain;
 	}
-	&.bg-home {
-		background-image: url('../images/bg-home.png');
+	&.bg-home, &.home, &.error404 {
+		background-image: url('http://eumaissete.com.br/dist/images/bg-home.png');
+		.d-blog, .d-verblog, .nav-b, .nav-c {
+			display: none;
+		}
 	}
-	&.bg-blog {
-		background-image: url('../images/bg-blog.png');
+	&.bg-blog, &.page-id-13 {
+		background-image: url('http://eumaissete.com.br/dist/images/bg-blog.png');
+		.d-home, .d-verblog, .nav-a, .nav-c {
+			display: none;
+		}
 	}
-	&.bg-verblog {
-		background-image: url('../images/bg-verblog.png');
+	&.bg-verblog, &.single-post {
+		background-image: url('http://eumaissete.com.br/dist/images/bg-verblog.png');
+		.d-home, .d-blog, .nav-a, .nav-b {
+			display: none;
+		}
 	}
 }
 
@@ -44,6 +53,68 @@ ul, ol {
 	  box-shadow: rgba(137, 150, 174, 0.25) 0px 0px 0px 0.2rem;
 	  border-color: rgb(137, 150, 174);
 	}
+}
+
+.entry-header, .comment-form-url {
+	display: none;
+}
+
+.comment-form-author, .comment-form-email {
+	-webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: calc(50% - .5rem); 
+  @media (max-width: 767.98px) {
+		-webkit-box-flex: 0;
+	  -ms-flex: 0 0 100%;
+	  flex: 0 0 100%;
+	  max-width: 100%; 
+	}
+}
+
+.post {
+	@media (max-width: 991.98px) {
+		padding: 0 15px;
+	}
+	.entry-footer {
+		margin-bottom: 40px;
+	}
+}
+
+#reply-title {
+	margin: 15px 0;
+	font-size: 1rem;
+	> a {
+		color: inherit;
+		text-decoration: none;
+	}
+	small {
+		a {
+			color: red;
+		}
+	}
+}
+
+.comment-list {
+	margin-bottom: 40px;
+}
+
+.comments-area .comments-title-wrap .comments-title:before {
+	display: none;
+}
+
+#emsWrapper .comment-form {
+	padding: 0;
+}
+
+.comments-area {
+	@media (max-width: 991.98px) {
+		padding: 0 15px;
+	}
+}
+
+.comments-title {
+	font-weight: 700;
 }
 
 .ems-error {
@@ -73,24 +144,26 @@ ul, ol {
 		@media (min-width: 992px) {
 			position: fixed;
 		}
+		@media (max-width: 991.98px) {
+			padding: 0 15px;
+		}
 		h1 {
 			width: 160px;
 			margin-top: 12px;
+			float: left;
+			@media (max-width: 991.98px) {
+				width: 140px;
+				margin-top: 9px;
+			}
 			a {
 				img {
 					display: block;
 					max-width: 100%;
 				}
 			}
-			@media (max-width: 991.98px) {
-				margin-right: auto;
-				margin-left: auto;
-			}
-			@media (min-width: 992px) {
-				float: left;
-			}
 		}
 		nav {
+			float: right;
 			a {
 				padding: 30px 0;
 				margin-right: 12px;
@@ -109,12 +182,13 @@ ul, ol {
 				@media (min-width: 992px) and (max-width: 1199.98px) {
 					font-size: 12px;
 				}
-			}
-			@media (max-width: 991.98px) {
-				display: none;
-			}
-			@media (min-width: 992px) {
-				float: right;
+				@media (max-width: 991.98px) {
+					display: none;
+					&:last-child {
+						display: inline-block;
+						padding: 24px 0;
+					}
+				}
 			}
 		}
 	}
@@ -211,13 +285,13 @@ ul, ol {
 			}
 		}
 		&__img1 {
-			background-image: url('../images/bg-somos-o-futuro.jpg');
+			background-image: url('http://eumaissete.com.br/dist/images/bg-somos-o-futuro.jpg');
 			@media (min-width: 992px) {
 				right: 15px;
 			}
 		}
 		&__img2 {
-			background-image: url('../images/bg-.metodologia-de-ensino.jpg');
+			background-image: url('http://eumaissete.com.br/dist/images/bg-.metodologia-de-ensino.jpg');
 			@media (min-width: 992px) {
 				left: 30px;
 			}
@@ -237,6 +311,11 @@ ul, ol {
 	}
 	.ems-content {
 		padding: 64px 0;
+		.ems404 {
+			padding: 80px 0;
+	    font-size: 20px;
+	    text-align: center;
+		}
 		&#section_4 {
 			padding: 64px 0 0 0;
 		}
@@ -270,25 +349,25 @@ ul, ol {
 		    background-repeat: no-repeat;
 		    	background-size: 36px;
 		    &.ico-eu-mente {
-		    	background-image: url('../images/ico-eu-mente.png');
+		    	background-image: url('http://eumaissete.com.br/dist/images/ico-eu-mente.png');
 		    }
 		    &.ico-eu-fisico {
 		    	background-size: 32px;
-		    	background-image: url('../images/ico-eu-fisico.png');
+		    	background-image: url('http://eumaissete.com.br/dist/images/ico-eu-fisico.png');
 		    }
 		    &.ico-eu-espiritual {
 		    	background-size: 26px;
-		    	background-image: url('../images/ico-eu-espiritual.png');
+		    	background-image: url('http://eumaissete.com.br/dist/images/ico-eu-espiritual.png');
 		    }
 		    &.ico-eu-ed-financeira {
-		    	background-image: url('../images/ico-eu-ed-financeira.png');
+		    	background-image: url('http://eumaissete.com.br/dist/images/ico-eu-ed-financeira.png');
 		    }
 		    &.ico-eu-tec-block {
-		    	background-image: url('../images/ico-eu-tec-block.png');
+		    	background-image: url('http://eumaissete.com.br/dist/images/ico-eu-tec-block.png');
 		    }
 		    &.ico-eu-op-binarias {
 		    	background-size: 32px;
-		    	background-image: url('../images/ico-eu-op-binarias.png');
+		    	background-image: url('http://eumaissete.com.br/dist/images/ico-eu-op-binarias.png');
 		    }
 			}
 			b {
@@ -372,10 +451,12 @@ ul, ol {
 		}
 	}
 	.ems-blog-content {
+		list-style: none;
+		padding: 0;
 		@media (min-width: 576px) {
 			margin-right: -22px;
 		}
-		.ems-blog-item {
+		.ems-blog-item, li {
 			width: 100%;
 			margin-bottom: 22px;
 			@media (min-width: 576px) {
@@ -411,6 +492,7 @@ ul, ol {
 			a {
 				color: #8996ae;
 				font-size: 13px;
+				display: block;
 			}
 		}
 	}
@@ -431,6 +513,37 @@ ul, ol {
 		@media (max-width: 991.98px) {
     	margin: 30px 15px 0 15px;
 		}
+	}
+}
+
+.pt-cv-ifield {
+	.pt-cv-meta-fields {
+		display: block;
+		margin-top: 20px;
+		color: #bbbec7;
+		font-size: 11px;
+	}
+	.pt-cv-title {
+		display: block;
+		margin-top: 20px;
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 1;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+	.pt-cv-content {
+		display: block;
+		margin: 20px 0 10px 0;
+		color: #8d919c;
+		font-size: 13px;
+	}
+	.pt-cv-readmore {
+		color: #8996ae;
+		font-size: 13px;
+		display: block;
 	}
 }
 

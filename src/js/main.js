@@ -4,9 +4,9 @@ $(document).ready(function (){
 
 	bgNav();
 
-	$('.nav-accr').on('click', function() {
-	  $("html, body").animate({
-	    scrollTop: $('#' +$(this).data('section')).offset().top - 80}, 500);
+	$('.nav-accr').on('click', function(e) {
+    e.preventDefault();
+	  $("html, body").animate({scrollTop: $('#' +$(this).data('section')).offset().top - 80}, 500);
 	});
 
 	var alturas = {};
@@ -48,6 +48,30 @@ $(document).ready(function (){
     }
   });
 
+	$('.pt-cv-wrapper .pt-cv-page').addClass('row');
+	$('.pt-cv-wrapper .pt-cv-page').find('img').css({'width':'100%', 'height':'auto'});
+	$('.pt-cv-wrapper .pt-cv-readmore').removeClass('btn btn-success');
+
+  $('.comment-form .comment-form-comment').find('textarea').addClass('form-control');
+  $('.comment-form .comment-form-author').addClass('mb-3').find('input').addClass('form-control');
+  $('.comment-form .comment-form-email').addClass('mb-3').find('input').addClass('form-control');
+  $('.comment-form .form-submit').find('.submit').addClass('btn btn-secondary');
+
+  $('.comment-form .comment-form-comment').before('<div class="d-md-flex flex-md-row" id="formOrder"></div>');
+
+  $('.comment-form .comment-form-author').appendTo('#formOrder');
+	$('.comment-form .comment-form-email').appendTo('#formOrder');
+
+	$('.entry-footer a').attr('href', 'javascript:;').css({'color':'inherit', 'cursor':'default'});
+
+	var baseUrl = window.location.hash;
+	var id = (baseUrl.substring(baseUrl.lastIndexOf('#') + 1));	
+	if (id != '' && id == 'wpcf7-f46-p13-o1'){
+		$('#'+id+' form').hide();
+		$('.alert-warning').removeClass('d-none');
+		$("html, body").animate({scrollTop: $('#section_5').offset().top - 80}, 500);
+	}
+
 });
 
 function bgNav() {
@@ -68,29 +92,34 @@ function Contato(){
 	erro = false;
 	emsElement = '';
 							
-	if(d.nome.value==""){
+	if($('#your-name').val()==""){
 		erro=true; 
-		emsElement += '#nome, ';
+		emsElement += '#your-name, ';
 	}
-	if(d.mail.value==""){
+	if($('#your-email').val()==""){
 		erro=true;
-		emsElement += '#mail, ';
+		emsElement += '#your-email, ';
 	}
-	if(d.assunto.value==""){
+	if($('#your-subject').val()==""){
 		erro=true;
-		emsElement += '#assunto, ';
+		emsElement += '#your-subject, ';
 	}
-	if(d.mensagem.value==""){
+	if($('#your-message').val()==""){
 		erro=true; 
-		emsElement += '#mensagem';
+		emsElement += '#your-message';
 	}
 	if (erro) {
 		$(emsElement).addClass('ems-error');
 	} else {
 		$('form .btn').html('Enviando...').attr('disabled','disabled');
-		setTimeout(function(){ 
-			$('form').css('display', 'none');
-			$('.alert-warning').removeClass('d-none'); 
-		}, 3000);
+		d.submit();
+	}
+}
+
+window.onload = function hash(){
+	var baseUrl = window.location.hash;
+	var id = (baseUrl.substring(baseUrl.lastIndexOf('#') + 1));	
+	if (id != ''){		
+		$("html, body").animate({scrollTop: $('#'+id).offset().top - 80}, 500);
 	}
 }

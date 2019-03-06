@@ -12,12 +12,18 @@ body {
   @media (min-width: 1200px) {
     body {
       background-size: contain; } }
-  body.bg-home {
-    background-image: url("../images/bg-home.png"); }
-  body.bg-blog {
-    background-image: url("../images/bg-blog.png"); }
-  body.bg-verblog {
-    background-image: url("../images/bg-verblog.png"); }
+  body.bg-home, body.home, body.error404 {
+    background-image: url("http://eumaissete.com.br/dist/images/bg-home.png"); }
+    body.bg-home .d-blog, body.bg-home .d-verblog, body.bg-home .nav-b, body.bg-home .nav-c, body.home .d-blog, body.home .d-verblog, body.home .nav-b, body.home .nav-c, body.error404 .d-blog, body.error404 .d-verblog, body.error404 .nav-b, body.error404 .nav-c {
+      display: none; }
+  body.bg-blog, body.page-id-13 {
+    background-image: url("http://eumaissete.com.br/dist/images/bg-blog.png"); }
+    body.bg-blog .d-home, body.bg-blog .d-verblog, body.bg-blog .nav-a, body.bg-blog .nav-c, body.page-id-13 .d-home, body.page-id-13 .d-verblog, body.page-id-13 .nav-a, body.page-id-13 .nav-c {
+      display: none; }
+  body.bg-verblog, body.single-post {
+    background-image: url("http://eumaissete.com.br/dist/images/bg-verblog.png"); }
+    body.bg-verblog .d-home, body.bg-verblog .d-blog, body.bg-verblog .nav-a, body.bg-verblog .nav-b, body.single-post .d-home, body.single-post .d-blog, body.single-post .nav-a, body.single-post .nav-b {
+      display: none; }
 
 ul, ol {
   margin: 0;
@@ -29,6 +35,53 @@ ul, ol {
   .form-control:focus {
     box-shadow: rgba(137, 150, 174, 0.25) 0px 0px 0px 0.2rem;
     border-color: #8996ae; }
+
+.entry-header, .comment-form-url {
+  display: none; }
+
+.comment-form-author, .comment-form-email {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: calc(50% - .5rem); }
+  @media (max-width: 767.98px) {
+    .comment-form-author, .comment-form-email {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%; } }
+
+@media (max-width: 991.98px) {
+  .post {
+    padding: 0 15px; } }
+
+.post .entry-footer {
+  margin-bottom: 40px; }
+
+#reply-title {
+  margin: 15px 0;
+  font-size: 1rem; }
+  #reply-title > a {
+    color: inherit;
+    text-decoration: none; }
+  #reply-title small a {
+    color: red; }
+
+.comment-list {
+  margin-bottom: 40px; }
+
+.comments-area .comments-title-wrap .comments-title:before {
+  display: none; }
+
+#emsWrapper .comment-form {
+  padding: 0; }
+
+@media (max-width: 991.98px) {
+  .comments-area {
+    padding: 0 15px; } }
+
+.comments-title {
+  font-weight: 700; }
 
 .ems-error {
   box-shadow: rgba(244, 67, 54, 0.25) 0px 0px 0px 0.2rem;
@@ -59,45 +112,48 @@ ul, ol {
     @media (min-width: 992px) {
       .ems-header__nav {
         position: fixed; } }
+    @media (max-width: 991.98px) {
+      .ems-header__nav {
+        padding: 0 15px; } }
     .ems-header__nav h1 {
       width: 160px;
-      margin-top: 12px; }
+      margin-top: 12px;
+      float: left; }
+      @media (max-width: 991.98px) {
+        .ems-header__nav h1 {
+          width: 140px;
+          margin-top: 9px; } }
       .ems-header__nav h1 a img {
         display: block;
         max-width: 100%; }
-      @media (max-width: 991.98px) {
-        .ems-header__nav h1 {
-          margin-right: auto;
-          margin-left: auto; } }
-      @media (min-width: 992px) {
-        .ems-header__nav h1 {
-          float: left; } }
-    .ems-header__nav nav a {
-      padding: 30px 0;
-      margin-right: 12px;
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-      font-size: 15px;
-      font-weight: 600;
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-      .ems-header__nav nav a:last-child {
-        margin-right: 0; }
-      .ems-header__nav nav a:hover, .ems-header__nav nav a.active {
-        color: #8996ae; }
-      @media (min-width: 992px) and (max-width: 1199.98px) {
-        .ems-header__nav nav a {
-          font-size: 12px; } }
-    @media (max-width: 991.98px) {
-      .ems-header__nav nav {
-        display: none; } }
-    @media (min-width: 992px) {
-      .ems-header__nav nav {
-        float: right; } }
+    .ems-header__nav nav {
+      float: right; }
+      .ems-header__nav nav a {
+        padding: 30px 0;
+        margin-right: 12px;
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        .ems-header__nav nav a:last-child {
+          margin-right: 0; }
+        .ems-header__nav nav a:hover, .ems-header__nav nav a.active {
+          color: #8996ae; }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .ems-header__nav nav a {
+            font-size: 12px; } }
+        @media (max-width: 991.98px) {
+          .ems-header__nav nav a {
+            display: none; }
+            .ems-header__nav nav a:last-child {
+              display: inline-block;
+              padding: 24px 0; } }
   .ems-header__title {
     padding: 64px 0;
     text-align: center;
@@ -177,12 +233,12 @@ ul, ol {
         #emsWrapper .ems-bg-gray-dark__img1, #emsWrapper .ems-bg-gray-dark__img2 {
           position: absolute; } }
     #emsWrapper .ems-bg-gray-dark__img1 {
-      background-image: url("../images/bg-somos-o-futuro.jpg"); }
+      background-image: url("http://eumaissete.com.br/dist/images/bg-somos-o-futuro.jpg"); }
       @media (min-width: 992px) {
         #emsWrapper .ems-bg-gray-dark__img1 {
           right: 15px; } }
     #emsWrapper .ems-bg-gray-dark__img2 {
-      background-image: url("../images/bg-.metodologia-de-ensino.jpg"); }
+      background-image: url("http://eumaissete.com.br/dist/images/bg-.metodologia-de-ensino.jpg"); }
       @media (min-width: 992px) {
         #emsWrapper .ems-bg-gray-dark__img2 {
           left: 30px; } }
@@ -198,6 +254,10 @@ ul, ol {
           padding: 64px 0 64px 30px; } }
   #emsWrapper .ems-content {
     padding: 64px 0; }
+    #emsWrapper .ems-content .ems404 {
+      padding: 80px 0;
+      font-size: 20px;
+      text-align: center; }
     #emsWrapper .ems-content#section_4 {
       padding: 64px 0 0 0; }
     #emsWrapper .ems-content .ems-desc-mais-7 {
@@ -228,20 +288,20 @@ ul, ol {
         background-repeat: no-repeat;
         background-size: 36px; }
         #emsWrapper .ems-content .ems-card span.ico-eu-mente {
-          background-image: url("../images/ico-eu-mente.png"); }
+          background-image: url("http://eumaissete.com.br/dist/images/ico-eu-mente.png"); }
         #emsWrapper .ems-content .ems-card span.ico-eu-fisico {
           background-size: 32px;
-          background-image: url("../images/ico-eu-fisico.png"); }
+          background-image: url("http://eumaissete.com.br/dist/images/ico-eu-fisico.png"); }
         #emsWrapper .ems-content .ems-card span.ico-eu-espiritual {
           background-size: 26px;
-          background-image: url("../images/ico-eu-espiritual.png"); }
+          background-image: url("http://eumaissete.com.br/dist/images/ico-eu-espiritual.png"); }
         #emsWrapper .ems-content .ems-card span.ico-eu-ed-financeira {
-          background-image: url("../images/ico-eu-ed-financeira.png"); }
+          background-image: url("http://eumaissete.com.br/dist/images/ico-eu-ed-financeira.png"); }
         #emsWrapper .ems-content .ems-card span.ico-eu-tec-block {
-          background-image: url("../images/ico-eu-tec-block.png"); }
+          background-image: url("http://eumaissete.com.br/dist/images/ico-eu-tec-block.png"); }
         #emsWrapper .ems-content .ems-card span.ico-eu-op-binarias {
           background-size: 32px;
-          background-image: url("../images/ico-eu-op-binarias.png"); }
+          background-image: url("http://eumaissete.com.br/dist/images/ico-eu-op-binarias.png"); }
       #emsWrapper .ems-content .ems-card b {
         display: block;
         font-size: 22px; }
@@ -301,42 +361,46 @@ ul, ol {
   @media (max-width: 991.98px) {
     #emsWrapper form {
       padding: 20px 15px 0 15px; } }
-  @media (min-width: 576px) {
-    #emsWrapper .ems-blog-content {
-      margin-right: -22px; } }
-  #emsWrapper .ems-blog-content .ems-blog-item {
-    width: 100%;
-    margin-bottom: 22px; }
+  #emsWrapper .ems-blog-content {
+    list-style: none;
+    padding: 0; }
     @media (min-width: 576px) {
-      #emsWrapper .ems-blog-content .ems-blog-item {
-        width: calc(50% - 22px);
-        margin-right: 22px;
-        float: left; } }
-    @media (min-width: 768px) {
-      #emsWrapper .ems-blog-content .ems-blog-item {
-        width: calc(33.33333333333333% - 22px); } }
-    @media (min-width: 992px) {
-      #emsWrapper .ems-blog-content .ems-blog-item {
-        width: calc(25% - 22px); } }
-    #emsWrapper .ems-blog-content .ems-blog-item__date {
-      display: block;
-      margin-top: 20px;
-      color: #bbbec7;
-      font-size: 11px; }
-    #emsWrapper .ems-blog-content .ems-blog-item__title {
-      display: block;
-      margin-top: 5px;
-      font-size: 26px;
-      font-weight: 700;
-      line-height: 1; }
-    #emsWrapper .ems-blog-content .ems-blog-item__desc {
-      display: block;
-      margin: 20px 0 10px 0;
-      color: #8d919c;
-      font-size: 13px; }
-    #emsWrapper .ems-blog-content .ems-blog-item a {
-      color: #8996ae;
-      font-size: 13px; }
+      #emsWrapper .ems-blog-content {
+        margin-right: -22px; } }
+    #emsWrapper .ems-blog-content .ems-blog-item, #emsWrapper .ems-blog-content li {
+      width: 100%;
+      margin-bottom: 22px; }
+      @media (min-width: 576px) {
+        #emsWrapper .ems-blog-content .ems-blog-item, #emsWrapper .ems-blog-content li {
+          width: calc(50% - 22px);
+          margin-right: 22px;
+          float: left; } }
+      @media (min-width: 768px) {
+        #emsWrapper .ems-blog-content .ems-blog-item, #emsWrapper .ems-blog-content li {
+          width: calc(33.33333333333333% - 22px); } }
+      @media (min-width: 992px) {
+        #emsWrapper .ems-blog-content .ems-blog-item, #emsWrapper .ems-blog-content li {
+          width: calc(25% - 22px); } }
+      #emsWrapper .ems-blog-content .ems-blog-item__date, #emsWrapper .ems-blog-content li__date {
+        display: block;
+        margin-top: 20px;
+        color: #bbbec7;
+        font-size: 11px; }
+      #emsWrapper .ems-blog-content .ems-blog-item__title, #emsWrapper .ems-blog-content li__title {
+        display: block;
+        margin-top: 5px;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1; }
+      #emsWrapper .ems-blog-content .ems-blog-item__desc, #emsWrapper .ems-blog-content li__desc {
+        display: block;
+        margin: 20px 0 10px 0;
+        color: #8d919c;
+        font-size: 13px; }
+      #emsWrapper .ems-blog-content .ems-blog-item a, #emsWrapper .ems-blog-content li a {
+        color: #8996ae;
+        font-size: 13px;
+        display: block; }
   #emsWrapper .ems-blog-bt-show-more {
     padding-bottom: 64px; }
     #emsWrapper .ems-blog-bt-show-more a {
@@ -352,6 +416,33 @@ ul, ol {
     @media (max-width: 991.98px) {
       #emsWrapper .alert {
         margin: 30px 15px 0 15px; } }
+
+.pt-cv-ifield .pt-cv-meta-fields {
+  display: block;
+  margin-top: 20px;
+  color: #bbbec7;
+  font-size: 11px; }
+
+.pt-cv-ifield .pt-cv-title {
+  display: block;
+  margin-top: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1; }
+  .pt-cv-ifield .pt-cv-title a {
+    color: inherit;
+    text-decoration: none; }
+
+.pt-cv-ifield .pt-cv-content {
+  display: block;
+  margin: 20px 0 10px 0;
+  color: #8d919c;
+  font-size: 13px; }
+
+.pt-cv-ifield .pt-cv-readmore {
+  color: #8996ae;
+  font-size: 13px;
+  display: block; }
 
 .ems-footer {
   text-align: center;
