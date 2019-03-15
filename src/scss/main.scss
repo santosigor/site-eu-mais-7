@@ -76,6 +76,11 @@ ul, ol {
 	@media (max-width: 991.98px) {
 		padding: 0 15px;
 	}
+	.entry-content {
+		h2 {
+			margin-bottom: 20px;
+		}
+	}
 	.entry-footer {
 		margin-bottom: 40px;
 	}
@@ -534,7 +539,7 @@ ul, ol {
 	.pt-cv-title {
 		display: block;
 		margin-top: 20px;
-		font-size: 26px;
+		font-size: 18px;
 		font-weight: 700;
 		line-height: 1;
 		a {
