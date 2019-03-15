@@ -72,6 +72,17 @@ ul, ol {
 	}
 }
 
+.entry .entry-content .wp-block-image img {
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+
+.entry .entry-content .wp-block-image figure {
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		max-width: 50%;
+	}
+}
+
 .post {
 	@media (max-width: 991.98px) {
 		padding: 0 15px;
