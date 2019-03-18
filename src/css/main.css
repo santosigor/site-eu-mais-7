@@ -20,9 +20,9 @@ body {
     background-image: url("https://eumaissete.com.br/dist/images/bg-blog.png"); }
     body.bg-blog .d-home, body.bg-blog .d-verblog, body.bg-blog .nav-a, body.bg-blog .nav-c, body.page-id-13 .d-home, body.page-id-13 .d-verblog, body.page-id-13 .nav-a, body.page-id-13 .nav-c {
       display: none; }
-  body.bg-verblog, body.single-post {
+  body.bg-verblog, body.single-post, body.category {
     background-image: url("https://eumaissete.com.br/dist/images/bg-verblog.png"); }
-    body.bg-verblog .d-home, body.bg-verblog .d-blog, body.bg-verblog .nav-a, body.bg-verblog .nav-b, body.single-post .d-home, body.single-post .d-blog, body.single-post .nav-a, body.single-post .nav-b {
+    body.bg-verblog .d-home, body.bg-verblog .d-blog, body.bg-verblog .nav-a, body.bg-verblog .nav-b, body.single-post .d-home, body.single-post .d-blog, body.single-post .nav-a, body.single-post .nav-b, body.category .d-home, body.category .d-blog, body.category .nav-a, body.category .nav-b {
       display: none; }
 
 ul, ol {
@@ -68,6 +68,75 @@ ul, ol {
 
 .post .entry-footer {
   margin-bottom: 40px; }
+
+.d-blog {
+  margin-bottom: 30px; }
+
+.pt-cv-content-item {
+  margin-top: 25px; }
+
+.wp-block-categories {
+  position: absolute;
+  margin-top: -100px;
+  cursor: default;
+  background: #e9ebf1;
+  width: 100%;
+  padding: 0 15px !important; }
+  @media (min-width: 576px) {
+    .wp-block-categories {
+      max-width: calc(540px - 30px); } }
+  @media (min-width: 768px) {
+    .wp-block-categories {
+      max-width: calc(720px - 30px); } }
+  @media (min-width: 992px) {
+    .wp-block-categories {
+      max-width: calc(960px - 30px); } }
+  @media (min-width: 1200px) {
+    .wp-block-categories {
+      max-width: calc(1140px - 30px); } }
+  .wp-block-categories li {
+    display: inline-block;
+    padding: 0 !important; }
+    .wp-block-categories li a {
+      font-size: 13px;
+      color: #343843;
+      text-transform: uppercase;
+      padding: 25px 25px;
+      display: block;
+      font-family: 'Montserrat';
+      font-weight: 600; }
+      .wp-block-categories li a:hover {
+        color: #8996ae; }
+
+.is-style-outline {
+  text-align: center;
+  padding-top: 60px; }
+  .is-style-outline a {
+    border-width: 1px !important;
+    padding: 0.56rem 1rem !important; }
+    .is-style-outline a:hover {
+      color: #8997ae;
+      border-color: #8997ae !important; }
+
+@media (max-width: 575.98px) {
+  .ems-list-category-post {
+    padding: 0 30px; } }
+
+.ems-list-category-post article {
+  margin-top: 25px !important; }
+  .ems-list-category-post article header h2 {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1; }
+    .ems-list-category-post article header h2 a {
+      color: inherit;
+      text-decoration: none; }
+  .ems-list-category-post article p {
+    color: #8d919c;
+    font-size: 13px; }
+  .ems-list-category-post article img {
+    max-width: 100%; }
 
 #reply-title {
   margin: 15px 0;

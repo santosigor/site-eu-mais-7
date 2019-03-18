@@ -31,20 +31,18 @@ $(document).ready(function (){
 
 	});
 
-	// blog
+	$('.pt-cv-content-item').hide();
+  $('.pt-cv-content-item').slice(0, 8).show();
 
-	$('.ems-blog-item').hide();
-  $('.ems-blog-item').slice(0, 8).show();
-
-	if ($('.ems-blog-item:hidden').length == 0) {
-		$('.ems-blog-bt-show-more').hide();
+	if ($('.pt-cv-content-item:hidden').length == 0) {
+		$('.is-style-outline').hide();
 	}
 
-  $('.ems-blog-bt-show-more a').on('click', function (e) {
+  $('.is-style-outline a').on('click', function (e) {
     e.preventDefault();
-    $('.ems-blog-item:hidden').slice(0, 8).slideDown('slow');
-    if ($('.ems-blog-item:hidden').length == 0) {
-        $('.ems-blog-bt-show-more').fadeOut('slow');
+    $('.pt-cv-content-item:hidden').slice(0, 8).slideDown('slow');
+    if ($('.pt-cv-content-item:hidden').length == 0) {
+        $('.is-style-outline').fadeOut('slow');
     }
   });
 
@@ -121,5 +119,31 @@ window.onload = function hash(){
 	var id = (baseUrl.substring(baseUrl.lastIndexOf('#') + 1));	
 	if (id != ''){		
 		$("html, body").animate({scrollTop: $('#'+id).offset().top - 80}, 500);
+	}
+}
+
+window.onload = function category(){
+	var url = location.href;
+	var urlS = url.split('/');
+	if(urlS[3] == 'category') {
+		$('section main header.page-header').after('<div class="row"></div>');
+		$('article').appendTo('.row');
+		$("section").addClass('ems-content');
+		$("section main").addClass('container ems-list-category-post');
+		$("section main header").removeClass('page-header entry-header');
+		$("section main header h2").removeClass('entry-title');
+		$("section main figure").removeClass('post-thumbnail');
+		$("section main figure a").removeClass('post-thumbnail-inner');
+		$("section main article").addClass('col-md-3 col-sm-6 col-xs-12');
+		$("section main article img").attr('height', '');
+		$("section main article .cat-links").remove();
+		$("section main article .comments-link").remove();
+
+		$("section main article").each(function(){
+			var str = $(this).find('h2').text();
+			var txt = $(this).find('p').text();
+			var newTxt = txt.replace(str, '');
+			$(this).find('p').text(newTxt);
+  	});
 	}
 }
