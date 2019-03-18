@@ -55,6 +55,33 @@ ul, ol {
 	}
 }
 
+.ems-loading {
+	padding: 100px 0;
+	background: #ffffff;
+	position: relative;
+	&:before {
+		content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    height: 50px;
+    z-index: 9;
+	}
+	span {
+		display: block;
+		width: 80px;
+		height: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		background-position: center center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+		background-image: url('https://eumaissete.com.br/dist/images/loading.gif');
+	}
+}
+
 .entry-header, .comment-form-url {
 	display: none;
 }
@@ -95,6 +122,19 @@ ul, ol {
 	.entry-footer {
 		margin-bottom: 40px;
 	}
+}
+
+.post-navigation .nav-links .nav-previous {
+	@media only screen and (min-width: 1168px) {
+		text-align: right;
+	}
+}
+
+.post-navigation {
+  @media only screen and (min-width: 768px) {
+  	margin-left: 0;
+  	margin-right: 0;
+  }
 }
 
 .d-blog {
@@ -332,6 +372,9 @@ ul, ol {
 
 #emsWrapper {
 	background: #ffffff;
+	height: 0;
+	overflow: hidden;
+	@include transition(all, .5s, ease-in-out);
 	.container-fluid {
 		padding: 0;
 	}

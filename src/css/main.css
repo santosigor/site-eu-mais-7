@@ -36,6 +36,30 @@ ul, ol {
     box-shadow: rgba(137, 150, 174, 0.25) 0px 0px 0px 0.2rem;
     border-color: #8996ae; }
 
+.ems-loading {
+  padding: 100px 0;
+  background: #ffffff;
+  position: relative; }
+  .ems-loading:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    height: 50px;
+    z-index: 9; }
+  .ems-loading span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://eumaissete.com.br/dist/images/loading.gif"); }
+
 .entry-header, .comment-form-url {
   display: none; }
 
@@ -68,6 +92,15 @@ ul, ol {
 
 .post .entry-footer {
   margin-bottom: 40px; }
+
+@media only screen and (min-width: 1168px) {
+  .post-navigation .nav-links .nav-previous {
+    text-align: right; } }
+
+@media only screen and (min-width: 768px) {
+  .post-navigation {
+    margin-left: 0;
+    margin-right: 0; } }
 
 .d-blog {
   margin-bottom: 30px; }
@@ -265,7 +298,14 @@ ul, ol {
           font-size: 12px; } }
 
 #emsWrapper {
-  background: #ffffff; }
+  background: #ffffff;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   #emsWrapper .container-fluid {
     padding: 0; }
   #emsWrapper hr.border-white {

@@ -1,5 +1,14 @@
 $(document).ready(function (){
 
+	var loading = location.href;
+	var loadingActive = loading.split('/');
+
+	if(loadingActive[3] != '') {
+		$('.ems-header').after('<div class="ems-loading"><span></span></div>');
+	} else {
+		$('#emsWrapper').css('height', 'auto');
+	}
+
 	// menu
 
 	bgNav();
@@ -68,6 +77,13 @@ $(document).ready(function (){
 		$('#'+id+' form').hide();
 		$('.alert-warning').removeClass('d-none');
 		$("html, body").animate({scrollTop: $('#section_5').offset().top - 80}, 500);
+	}
+
+	if(loadingActive[3] != '') {
+		setTimeout(function(){
+			$('.ems-loading').remove();
+			$('#emsWrapper').css('height', 'auto');
+		}, 2000);
 	}
 
 });
