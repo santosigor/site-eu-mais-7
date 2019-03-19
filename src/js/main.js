@@ -5,6 +5,7 @@ $(document).ready(function (){
 
 	if(loadingActive[3] != '') {
 		$('.ems-header').after('<div class="ems-loading"><span></span></div>');
+		$('.wp-block-categories').append('<a href="https://www.youtube.com/channel/UCovPLjSpV_YuUUbccz3O0bg" class="emsTV" target="_blank">Eu+7 TV</a>');
 	} else {
 		$('#emsWrapper').css('height', 'auto');
 	}
@@ -83,7 +84,7 @@ $(document).ready(function (){
 		setTimeout(function(){
 			$('.ems-loading').remove();
 			$('#emsWrapper').css('height', 'auto');
-		}, 2000);
+		}, 1000);
 	}
 
 });

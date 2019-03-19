@@ -175,9 +175,25 @@ ul, ol {
 			display: block;
 			font-family: 'Montserrat';
 			font-weight: 600;
+			@include transition(all, .2s, ease-in-out);
 			&:hover {
 				color: #8996ae;
 			}
+		}
+	}
+	.emsTV {
+		float: right;
+		display: inline-block;
+		font-size: 13px;
+		color: #8996ae;
+		text-transform: uppercase;
+		padding: 23px 25px;
+		font-family: 'Montserrat';
+		font-weight: 700;
+		text-decoration: none!important;
+		@include transition(all, .2s, ease-in-out);
+		&:hover {
+			color: #343843;
 		}
 	}
 }

@@ -137,9 +137,31 @@ ul, ol {
       padding: 25px 25px;
       display: block;
       font-family: 'Montserrat';
-      font-weight: 600; }
+      font-weight: 600;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
       .wp-block-categories li a:hover {
         color: #8996ae; }
+  .wp-block-categories .emsTV {
+    float: right;
+    display: inline-block;
+    font-size: 13px;
+    color: #8996ae;
+    text-transform: uppercase;
+    padding: 23px 25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    text-decoration: none !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .wp-block-categories .emsTV:hover {
+      color: #343843; }
 
 .is-style-outline {
   text-align: center;
