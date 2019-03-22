@@ -6,6 +6,47 @@ $(document).ready(function (){
 	if(loadingActive[3] != '') {
 		$('.ems-header').after('<div class="ems-loading"><span></span></div>');
 		$('.wp-block-categories').append('<a href="https://www.youtube.com/channel/UCovPLjSpV_YuUUbccz3O0bg" class="emsTV" target="_blank">Eu+7 TV</a>');
+
+		if($(window).width() >= 992){
+			if ($('.wp-block-categories li').length > 4) {
+				$('.wp-block-categories li').addClass('emsShowMore').hide();
+				$('.wp-block-categories li').slice(0, 4).removeClass('emsShowMore').show();
+				$('.wp-block-categories .emsTV').before('<a href="#" class="emsMoreCat" title="Mais categorias"></a>');
+				$('.wp-block-categories .emsMoreCat').after('<span class="emsShowMoreContent"></span>');
+
+				$('.wp-block-categories .emsShowMore').appendTo('.emsShowMoreContent');
+				$('.wp-block-categories .emsShowMoreContent li').show();
+				
+				$('.emsMoreCat').on('click', function(e) {
+		    	e.preventDefault();
+				  if($(this).hasClass('active')) {
+				  	$(this).removeClass('active');
+				  	$('.wp-block-categories .emsShowMoreContent').fadeOut();
+				  } else {
+				  	$(this).addClass('active');
+				  	$('.wp-block-categories .emsShowMoreContent').fadeIn();
+				  }
+				});
+			}
+		} else {
+			$('.wp-block-categories .emsTV').before('<a href="#" class="emsMoreCatMobile">Categorias</a>');
+			$('.wp-block-categories li').addClass('emsShowMore');
+			$('.wp-block-categories .emsMoreCatMobile').after('<span class="emsShowMoreContentMobile"></span>');
+			$('.wp-block-categories .emsShowMore').appendTo('.emsShowMoreContentMobile');
+
+			$('.emsMoreCatMobile').on('click', function(e) {
+	    	e.preventDefault();
+			  if($(this).hasClass('active')) {
+			  	$(this).removeClass('active');
+			  	$('.wp-block-categories .emsShowMoreContentMobile').fadeOut();
+			  } else {
+			  	$(this).addClass('active');
+			  	$('.wp-block-categories .emsShowMoreContentMobile').fadeIn();
+			  }
+			});
+			
+		}
+
 	} else {
 		$('#emsWrapper').css('height', 'auto');
 	}
@@ -85,6 +126,13 @@ $(document).ready(function (){
 			$('.ems-loading').remove();
 			$('#emsWrapper').css('height', 'auto');
 		}, 1000);
+	}
+
+	var titlePost = $('title').text();
+	if($('.single-post article.post .entry-content .wp-block-image').length != 0) {
+		$('.single-post article.post .entry-content .wp-block-image').after('<h2>'+titlePost+'</h2>');
+	} else {
+		$('.single-post article.post .entry-content').prepend('<h2>'+titlePost+'</h2>');
 	}
 
 });

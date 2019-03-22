@@ -1,61 +1,70 @@
-site lock
 
-contato@midia2comunicacao.com
-EzQ#mjM@qFC7v!
+Hospedagem geral
 
+https://financeiro.hostgator.com.br/
 
-----------------
+Usuário: contato@midia2comunicacao.com
+Senha: Sucesso2903
 
-hospedagem geral
+---------------------------------------
 
-contato@midia2comunicacao.com
-Sucesso2903
+Hospedagem eumaissete
 
-
--------------
-
-eumaissete
+https://br998.hostgator.com.br:2083/
 
 Usuário: eumais98
 Senha: ow0m3Pm53T
 
--------
+		---------------------------------------
+
+		BD: eumais98_wordpress
+
+		Usuário: eumais98_ems7
+		Senha: Ez2050Q#mjMB@qdFC7v!
+
+		---------------------------------------
+
+		Admin Wordpress
+
+		https://eumaissete.com.br/wp-admin
+
+		Usuário: eumais7WP
+		Senha: uIu&y5tEHP@4Mu^Wo7oJ0)
+
+---------------------------------------
+
+Email - UOL Host
+
+https://painel.uol.com.br/
+
+Usuário: contato@eumaissete.com.br
+SEnha: sucesso2019
+
+		---------------------------------------
+
+		Contas de email
+
+		Usuário: contato@eumaissete.com.br
+		Senha: 58MRE[nQM87qZD
+
+		Usuário: atendimento@eumaissete.com.br
+		Senha: 58MRE[nQM87qZD
+
+		Usuário: cursos@eumaissete.com.br
+		Senha: 58MRE[nQM87qZD
+
+		Usuário: financeiro@eumaissete.com.br
+		Senha: 58MRE[nQM87qZD
+
+---------------------------------------
 
 
-bd
-
-eumais98_wordpress
-
-user: eumais98_ems7
-senha: Ez2050Q#mjMB@qdFC7v!
 
 
---------
 
-
-user admin wordpress
-
-eumais7WP
-uIu&y5tEHP@4Mu^Wo7oJ0)
-
-
-------------------
-
-
-email
 
 https://br998.hostgator.com.br:2096/
 
 contato@eumaissete.com.br
 uIu&y5tCTTP@4Mu^Wo7oJ0)
 
------
-
-atendimento@eumaissete.com.br
-58M^RE[nQM87qZD
-
-financeiro@eumaissete.com.br
-58M^RE[nQM87qZD
-
-suporte@eumaissete.com.br
-58M^RE[nQM87qZD
