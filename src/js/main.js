@@ -3,7 +3,7 @@ $(document).ready(function (){
 	var loading = location.href;
 	var loadingActive = loading.split('/');
 
-	if(loadingActive[3] != '') {
+	if(loadingActive[3] != '' && loadingActive[3]  != '#wpcf7-f46-p13-o1') {
 		$('.ems-header').after('<div class="ems-loading"><span></span></div>');
 		$('.wp-block-categories').append('<a href="https://www.youtube.com/channel/UCovPLjSpV_YuUUbccz3O0bg" class="emsTV" target="_blank">Eu+7 TV</a>');
 
